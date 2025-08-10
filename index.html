@@ -221,17 +221,10 @@
         }
         
         .prount-number {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--secondary);
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-        }
-        
-        .prount-title {
-            font-size: 1.2rem;
-            color: var(--text);
-            font-weight: bold;
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
         }
         
         /* Modal Styles */
@@ -392,43 +385,33 @@
         <div class="prounts-grid" id="prountsGrid">
             <div class="prount-box" data-prount="1">
                 <div class="prount-number">1</div>
-                <div class="prount-title">ABC</div>
             </div>
             <div class="prount-box" data-prount="2">
                 <div class="prount-number">2</div>
-                <div class="prount-title">DEF</div>
             </div>
             <div class="prount-box" data-prount="3">
                 <div class="prount-number">3</div>
-                <div class="prount-title">SJ</div>
             </div>
             <div class="prount-box" data-prount="4">
                 <div class="prount-number">4</div>
-                <div class="prount-title">SJSN</div>
             </div>
             <div class="prount-box" data-prount="5">
                 <div class="prount-number">5</div>
-                <div class="prount-title">EJSJD</div>
             </div>
             <div class="prount-box" data-prount="6">
                 <div class="prount-number">6</div>
-                <div class="prount-title">SJSN</div>
             </div>
             <div class="prount-box" data-prount="7">
                 <div class="prount-number">7</div>
-                <div class="prount-title">COMING SOON</div>
             </div>
             <div class="prount-box" data-prount="8">
                 <div class="prount-number">8</div>
-                <div class="prount-title">COMING SOON</div>
             </div>
             <div class="prount-box" data-prount="9">
                 <div class="prount-number">9</div>
-                <div class="prount-title">COMING SOON</div>
             </div>
             <div class="prount-box" data-prount="10">
                 <div class="prount-number">10</div>
-                <div class="prount-title">COMING SOON</div>
             </div>
         </div>
         
@@ -453,7 +436,7 @@
     <div id="prountModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2 class="modal-title">PROUNT <span id="modalPrountNum"></span> - <span id="modalPrountTitle"></span></h2>
+            <h2 class="modal-title">PROUNT <span id="modalPrountNum"></span></h2>
             <div class="modal-body" id="modalPrountContent">
                 <!-- Content will be loaded here -->
             </div>
@@ -558,144 +541,67 @@
         const prountBoxes = document.querySelectorAll('.prount-box');
         const prountModal = document.getElementById('prountModal');
         const modalPrountNum = document.getElementById('modalPrountNum');
-        const modalPrountTitle = document.getElementById('modalPrountTitle');
         const modalPrountContent = document.getElementById('modalPrountContent');
         const closeModalButtons = document.querySelectorAll('.close-modal');
         
         // Prount content data
         const prountsContent = {
-            1: {
-                title: "ABC",
-                content: `
-                    <p>Premium WhatsApp unban solution with guaranteed results. Our ABC service provides the most reliable method to recover your banned WhatsApp account within 24 hours.</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>100% success rate</li>
-                        <li>24-hour recovery guarantee</li>
-                        <li>Works on permanent bans</li>
-                        <li>Complete privacy protection</li>
-                    </ul>
-                `
-            },
-            2: {
-                title: "DEF",
-                content: `
-                    <p>Advanced WhatsApp unban service for difficult cases. Our DEF solution handles even the most complex ban scenarios.</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>High success rate</li>
-                        <li>Specialized in mass reporting cases</li>
-                        <li>Works on shadow bans</li>
-                        <li>Fast response time</li>
-                    </ul>
-                `
-            },
-            3: {
-                title: "SJ",
-                content: `
-                    <p>Specialized service for business account recovery. Get your WhatsApp Business account back quickly with our SJ service.</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Business account specialists</li>
-                        <li>Catalog and product recovery</li>
-                        <li>API connection support</li>
-                        <li>Priority support</li>
-                    </ul>
-                `
-            },
-            4: {
-                title: "SJSN",
-                content: `
-                    <p>Permanent ban solutions with verification. Our SJSN service handles even the most difficult permanent bans.</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Permanent ban specialists</li>
-                        <li>Device verification</li>
-                        <li>Complete documentation support</li>
-                        <li>Guaranteed results</li>
-                    </ul>
-                `
-            },
-            5: {
-                title: "EJSJD",
-                content: `
-                    <p>VIP unban service for premium clients. Our EJSJD service offers white-glove treatment for your WhatsApp account.</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>Dedicated account manager</li>
-                        <li>24/7 priority support</li>
-                        <li>Multi-account solutions</li>
-                        <li>Preventative protection</li>
-                    </ul>
-                `
-            },
-            6: {
-                title: "SJSN",
-                content: `
-                    <p>Fast-track unban within 24 hours. Need your account back urgently? Our SJSN service delivers fast results.</p>
-                    <p>Features:</p>
-                    <ul>
-                        <li>24-hour guarantee</li>
-                        <li>Emergency response team</li>
-                        <li>After-hours support</li>
-                        <li>Urgent case specialists</li>
-                    </ul>
-                `
-            },
-            7: {
-                title: "COMING SOON",
-                content: `
-                    <p>New service launching soon. Check back for updates on our latest WhatsApp unban solution.</p>
-                `
-            },
-            8: {
-                title: "COMING SOON",
-                content: `
-                    <p>New service launching soon. Check back for updates on our latest WhatsApp unban solution.</p>
-                `
-            },
-            9: {
-                title: "COMING SOON",
-                content: `
-                    <p>New service launching soon. Check back for updates on our latest WhatsApp unban solution.</p>
-                `
-            },
-            10: {
-                title: "COMING SOON",
-                content: `
-                    <p>New service launching soon. Check back for updates on our latest WhatsApp unban solution.</p>
-                `
-            }
+            1: `
+                <h3>Premium WhatsApp Unban Solution</h3>
+                <p>With guaranteed results. Our service provides the most reliable method to recover your banned WhatsApp account within 24 hours.</p>
+                <p>Features:</p>
+                <ul>
+                    <li>100% success rate</li>
+                    <li>24-hour recovery guarantee</li>
+                    <li>Works on permanent bans</li>
+                    <li>Complete privacy protection</li>
+                </ul>
+                <hr>
+                <p>I am heart patient mny khud ko shoot kiya tha us k bad mera uk mn 4 operation howa han last time 2 month phla dr na kaha 3 4 month bad iska heart kam krna band kr dy ga YARAM KAZMI IS HERE 🌚🔥 WHERE IS MY ROOH 😫💗 I MISS YOU JANNAH 🫠🙈i am trying to be yaram kazmi 🌚🔥 💯 just check videosI am heart patient mny khud ko shoot kiya tha us k bad mera uk mn 4 operation howa han last time 2 month phla dr na kaha 3 4 month bad iska heart kam krna band kr dy gaI am heart patient mny khud ko shoot kiya tha us k bad mera uk mn 4 operation howa han last time 2 month phla dr na kaha 3 4 month bad iska heart kam krna band kr dy ga</p>
+            `,
+            2: `
+                <h3>PROUNT 2 - DEF Service</h3>
+                <p>Advanced WhatsApp unban solution for difficult cases.</p>
+            `,
+            3: `
+                <h3>PROUNT 3 - AJ Service</h3>
+                <p>Specialized WhatsApp recovery service.</p>
+            `,
+            4: `
+                <h3>PROUNT 4 - SJSN Service</h3>
+                <p>Permanent ban solutions with verification.</p>
+            `,
+            5: `
+                <h3>PROUNT 5 - EJSJD Service</h3>
+                <p>VIP unban service for premium clients.</p>
+            `,
+            6: `
+                <h3>PROUNT 6 - SJSN Service</h3>
+                <p>Fast-track unban within 24 hours.</p>
+            `,
+            7: `
+                <h3>PROUNT 7 - Coming Soon</h3>
+                <p>New service launching soon.</p>
+            `,
+            8: `
+                <h3>PROUNT 8 - Coming Soon</h3>
+                <p>New service launching soon.</p>
+            `,
+            9: `
+                <h3>PROUNT 9 - Coming Soon</h3>
+                <p>New service launching soon.</p>
+            `,
+            10: `
+                <h3>PROUNT 10 - Coming Soon</h3>
+                <p>New service launching soon.</p>
+            `
         };
-
-        // Binance specific content
-        const binanceContent = `
-            <h3>Binance Account Instructions</h3>
-            <p>Apna Binance Ka Account Is Link Sy bnain</p>
-            <p>Agr phly Sy account bna hoa hy to ghr ma kisi k name ph account bna lain</p>
-            <p>Account bnaty hoey Video ya screenshot Lazmi share krain</p>
-            <p>or Apna Binance id b share krain</p>
-            <p>Hmari Team Apki Youtube video ki watching or Link sy account bnany ko verify kry gi or apko 1 hr k andr andr Add kr dy gi premium group ma,</p>
-            <p>Fake Screenshots bhjny waly ko Permanent Block kr dia jaye ga</p>
-            <p>Thank you..</p>
-            <p>Next sari trade strategies is channel ph upload hon gi isy b subscribe kr ln</p>
-        `;
 
         prountBoxes.forEach(box => {
             box.addEventListener('click', function() {
                 const prountNumber = this.getAttribute('data-prount');
-                const prountData = prountsContent[prountNumber];
-                
                 modalPrountNum.textContent = prountNumber;
-                modalPrountTitle.textContent = prountData.title;
-                
-                // Special content for prount 1
-                if (prountNumber === '1') {
-                    modalPrountContent.innerHTML = prountData.content + binanceContent;
-                } else {
-                    modalPrountContent.innerHTML = prountData.content;
-                }
-                
+                modalPrountContent.innerHTML = prountsContent[prountNumber];
                 prountModal.style.display = 'flex';
             });
         });
