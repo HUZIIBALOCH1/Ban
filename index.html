@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLACK WORLD | Whatsapp Unban Prounts</title>
+    <title>BLACK WORLD | Whatsapp Unban Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -84,101 +84,6 @@
             100% { opacity: 0.7; }
         }
         
-        /* Login Form Styles */
-        .login-container {
-            background: rgba(0, 0, 0, 0.7);
-            border: 2px solid var(--accent);
-            border-radius: 10px;
-            padding: 30px;
-            max-width: 500px;
-            margin: 0 auto 50px;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3),
-                        inset 0 0 10px rgba(0, 255, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .login-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                transparent 45%,
-                rgba(0, 255, 0, 0.1) 50%,
-                transparent 55%
-            );
-            animation: shine 5s infinite;
-            transform: rotate(30deg);
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(30deg); }
-            100% { transform: translateX(100%) rotate(30deg); }
-        }
-        
-        .login-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            color: var(--accent);
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--accent);
-            font-size: 0.9rem;
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--accent);
-            border-radius: 5px;
-            color: var(--text);
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-            border-color: var(--text);
-        }
-        
-        .login-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(45deg, var(--secondary), var(--accent));
-            border: none;
-            border-radius: 5px;
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-        
-        .login-btn:hover {
-            background: linear-gradient(45deg, var(--accent), var(--secondary));
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
-            transform: translateY(-2px);
-        }
-        
         /* Prounts Grid */
         .prounts-grid {
             display: grid;
@@ -228,17 +133,10 @@
         }
         
         .prount-number {
-            font-size: 1.2rem;
+            font-size: 2rem;
             color: var(--secondary);
             margin-bottom: 10px;
             text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-        }
-        
-        .prount-title {
-            font-size: 1.5rem;
-            color: var(--text);
-            font-weight: bold;
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
         }
         
         /* Modal Styles */
@@ -266,8 +164,10 @@
             border: 2px solid var(--accent);
             border-radius: 10px;
             padding: 30px;
-            max-width: 600px;
+            max-width: 800px;
             width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
             box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
             position: relative;
             animation: slideUp 0.5s;
@@ -301,73 +201,34 @@
             text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
         }
         
-        .modal-body {
-            margin-bottom: 30px;
+        .prount-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
         }
         
-        .form-row {
-            margin-bottom: 15px;
-        }
-        
-        .form-row label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--accent);
-        }
-        
-        .form-row input, .form-row textarea {
-            width: 100%;
-            padding: 10px;
+        .prount-item {
             background: rgba(0, 0, 0, 0.5);
             border: 1px solid var(--accent);
             border-radius: 5px;
-            color: var(--text);
-        }
-        
-        .submit-btn {
-            background: linear-gradient(45deg, var(--secondary), var(--accent));
-            border: none;
-            padding: 10px 20px;
-            color: var(--primary);
-            font-weight: bold;
-            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
             cursor: pointer;
             transition: all 0.3s;
         }
         
-        .submit-btn:hover {
-            background: linear-gradient(45deg, var(--accent), var(--secondary));
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        .prount-item:hover {
+            background: rgba(0, 255, 0, 0.1);
+            transform: scale(1.05);
         }
         
-        /* Error Modal */
-        .error-modal .modal-content {
-            text-align: center;
-        }
-        
-        .error-icon {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            animation: shake 0.5s;
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20%, 60% { transform: translateX(-10px); }
-            40%, 80% { transform: translateX(10px); }
-        }
-        
-        .error-message {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--text);
-        }
-        
-        .contact-info {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: var(--accent);
+        .prount-content {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--secondary);
+            border-radius: 5px;
         }
         
         /* Footer Styles */
@@ -427,6 +288,10 @@
             .prounts-grid {
                 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
+            
+            .prount-list {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
         }
     </style>
 </head>
@@ -437,66 +302,39 @@
     <div class="container">
         <header>
             <h1 class="title">BLACK WORLD</h1>
-            <p class="subtitle">Whatsapp Unban Prounts</p>
+            <p class="subtitle">Premium Whatsapp Unban Services</p>
         </header>
         
-        <div class="login-container">
-            <h2 class="login-title">ACCESS PORTAL</h2>
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="username">USERNAME</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="login-btn">ENTER</button>
-            </form>
-        </div>
-        
-        <div id="prountsSection" style="display: none;">
-            <div class="prounts-grid">
-                <div class="prount-box" data-prount="1">
-                    <div class="prount-number">PROUNT 1</div>
-                    <div class="prount-title">ABC</div>
-                </div>
-                <div class="prount-box" data-prount="2">
-                    <div class="prount-number">PROUNT 2</div>
-                    <div class="prount-title">DEF</div>
-                </div>
-                <div class="prount-box" data-prount="3">
-                    <div class="prount-number">PROUNT 3</div>
-                    <div class="prount-title">SJ</div>
-                </div>
-                <div class="prount-box" data-prount="4">
-                    <div class="prount-number">PROUNT 4</div>
-                    <div class="prount-title">SJSN</div>
-                </div>
-                <div class="prount-box" data-prount="5">
-                    <div class="prount-number">PROUNT 5</div>
-                    <div class="prount-title">EJSJD</div>
-                </div>
-                <div class="prount-box" data-prount="6">
-                    <div class="prount-number">PROUNT 6</div>
-                    <div class="prount-title">SJSN</div>
-                </div>
-                <div class="prount-box" data-prount="7">
-                    <div class="prount-number">PROUNT 7</div>
-                    <div class="prount-title">COMING SOON</div>
-                </div>
-                <div class="prount-box" data-prount="8">
-                    <div class="prount-number">PROUNT 8</div>
-                    <div class="prount-title">COMING SOON</div>
-                </div>
-                <div class="prount-box" data-prount="9">
-                    <div class="prount-number">PROUNT 9</div>
-                    <div class="prount-title">COMING SOON</div>
-                </div>
-                <div class="prount-box" data-prount="10">
-                    <div class="prount-number">PROUNT 10</div>
-                    <div class="prount-title">COMING SOON</div>
-                </div>
+        <div class="prounts-grid">
+            <div class="prount-box" data-prount="1">
+                <div class="prount-number">1</div>
+            </div>
+            <div class="prount-box" data-prount="2">
+                <div class="prount-number">2</div>
+            </div>
+            <div class="prount-box" data-prount="3">
+                <div class="prount-number">3</div>
+            </div>
+            <div class="prount-box" data-prount="4">
+                <div class="prount-number">4</div>
+            </div>
+            <div class="prount-box" data-prount="5">
+                <div class="prount-number">5</div>
+            </div>
+            <div class="prount-box" data-prount="6">
+                <div class="prount-number">6</div>
+            </div>
+            <div class="prount-box" data-prount="7">
+                <div class="prount-number">7</div>
+            </div>
+            <div class="prount-box" data-prount="8">
+                <div class="prount-number">8</div>
+            </div>
+            <div class="prount-box" data-prount="9">
+                <div class="prount-number">9</div>
+            </div>
+            <div class="prount-box" data-prount="10">
+                <div class="prount-number">10</div>
             </div>
         </div>
         
@@ -517,48 +355,27 @@
         </footer>
     </div>
     
-    <!-- Prount Modals -->
+    <!-- Prount Modal -->
     <div id="prountModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2 class="modal-title" id="modalPrountTitle">PROUNT <span id="prountNum"></span></h2>
-            <div class="modal-body">
-                <form id="prountForm">
-                    <div class="form-row">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="phone">WhatsApp Number</label>
-                        <input type="text" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="email">Email (Optional)</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <div class="form-row">
-                        <label for="details">Details</label>
-                        <textarea id="details" name="details" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">SUBMIT REQUEST</button>
-                </form>
+            <h2 class="modal-title">PROUNT <span id="prountNum"></span></h2>
+            
+            <div class="prount-list">
+                <div class="prount-item" data-content="1">PROUNT 1</div>
+                <div class="prount-item" data-content="2">PROUNT 2</div>
+                <div class="prount-item" data-content="3">PROUNT 3</div>
+                <div class="prount-item" data-content="4">PROUNT 4</div>
+                <div class="prount-item" data-content="5">PROUNT 5</div>
+                <div class="prount-item" data-content="6">PROUNT 6</div>
+                <div class="prount-item" data-content="7">PROUNT 7</div>
+                <div class="prount-item" data-content="8">PROUNT 8</div>
+                <div class="prount-item" data-content="9">PROUNT 9</div>
+                <div class="prount-item" data-content="10">PROUNT 10</div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Error Modal -->
-    <div id="errorModal" class="modal error-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="error-icon">
-                <i class="fas fa-exclamation-triangle"></i>
-            </div>
-            <h2 class="modal-title">ACCESS DENIED</h2>
-            <p class="error-message">The password you entered is incorrect. Please contact the owner for the correct password.</p>
-            <div class="contact-info">
-                <p>WhatsApp: 923058190234</p>
-                <p>Telegram: @HUZIIBALOCH</p>
-                <p>Channel: <a href="https://whatsapp.com/channel/0029VbB0uxI2kNFsUSvDdG0f" style="color: var(--accent);">WhatsApp Channel Link</a></p>
+            
+            <div class="prount-content" id="prountContent">
+                <!-- Content will be loaded here -->
             </div>
         </div>
     </div>
@@ -611,58 +428,55 @@
             canvas.height = window.innerHeight;
         });
         
-        // Login Functionality
-        const loginForm = document.getElementById('loginForm');
-        const prountsSection = document.getElementById('prountsSection');
-        
-        const correctUsername = 'BLACKWORLD';
-        const correctPassword = 'HUZIIHACKER';
-        
-        loginForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            if (username === correctUsername && password === correctPassword) {
-                // Successful login
-                loginForm.reset();
-                prountsSection.style.display = 'block';
-                window.scrollTo({
-                    top: prountsSection.offsetTop,
-                    behavior: 'smooth'
-                });
-            } else {
-                // Failed login
-                document.getElementById('errorModal').style.display = 'flex';
-            }
-        });
-        
         // Prount Modal Functionality
         const prountBoxes = document.querySelectorAll('.prount-box');
         const prountModal = document.getElementById('prountModal');
         const prountNum = document.getElementById('prountNum');
-        const modalPrountTitle = document.getElementById('modalPrountTitle');
+        const prountContent = document.getElementById('prountContent');
+        const prountItems = document.querySelectorAll('.prount-item');
         const closeModalButtons = document.querySelectorAll('.close-modal');
         
+        // Sample content for each prount
+        const prountsData = {
+            1: "<h3>ABC Service</h3><p>Premium WhatsApp unban solution with guaranteed results.</p>",
+            2: "<h3>DEF Service</h3><p>Advanced account recovery for banned numbers.</p>",
+            3: "<h3>SJ Service</h3><p>Specialized in mass reporting cases.</p>",
+            4: "<h3>SJSN Service</h3><p>Permanent ban solutions with verification.</p>",
+            5: "<h3>EJSJD Service</h3><p>VIP unban service for business accounts.</p>",
+            6: "<h3>SJSN Service</h3><p>Fast-track unban within 24 hours.</p>",
+            7: "<h3>PROUNT 7</h3><p>Service details coming soon.</p>",
+            8: "<h3>PROUNT 8</h3><p>Service details coming soon.</p>",
+            9: "<h3>PROUNT 9</h3><p>Service details coming soon.</p>",
+            10: "<h3>PROUNT 10</h3><p>Service details coming soon.</p>"
+        };
+        
+        // Open modal when prount box is clicked
         prountBoxes.forEach(box => {
             box.addEventListener('click', function() {
                 const prountNumber = this.getAttribute('data-prount');
                 prountNum.textContent = prountNumber;
-                
-                // Set the modal title based on which prount was clicked
-                const prountTitle = this.querySelector('.prount-title').textContent;
-                modalPrountTitle.textContent = `PROUNT ${prountNumber} - ${prountTitle}`;
-                
+                prountContent.innerHTML = prountsData[prountNumber];
                 prountModal.style.display = 'flex';
             });
         });
         
+        // Change content when prount item is clicked
+        prountItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const contentNumber = this.getAttribute('data-content');
+                prountNum.textContent = contentNumber;
+                prountContent.innerHTML = prountsData[contentNumber];
+                
+                // Highlight selected item
+                prountItems.forEach(i => i.style.background = 'rgba(0, 0, 0, 0.5)');
+                this.style.background = 'rgba(0, 255, 0, 0.2)';
+            });
+        });
+        
+        // Close modal
         closeModalButtons.forEach(button => {
             button.addEventListener('click', function() {
-                document.querySelectorAll('.modal').forEach(modal => {
-                    modal.style.display = 'none';
-                });
+                prountModal.style.display = 'none';
             });
         });
         
@@ -672,14 +486,6 @@
                 e.target.style.display = 'none';
             }
         });
-        
-        // Form submission
-        document.getElementById('prountForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Request submitted successfully! We will contact you soon.');
-            prountModal.style.display = 'none';
-            this.reset();
-        });
     </script>
 </body>
-</html>
+    </html>
