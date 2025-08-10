@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLACK WORLD | Whatsapp Unban Services</title>
+    <title>BLACK WORLD | WhatsApp Unban Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -84,131 +84,141 @@
             100% { opacity: 0.7; }
         }
         
-        /* Prounts Grid */
-        .prounts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .prount-box {
+        /* Login Form Styles */
+        .login-container {
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid var(--accent);
             border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto 50px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3),
+                        inset 0 0 10px rgba(0, 255, 0, 0.2);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
-            height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            animation: float 6s ease-in-out infinite;
         }
         
-        .prount-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
-            border-color: var(--text);
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
         
-        .prount-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                45deg,
-                transparent 45%,
-                rgba(0, 255, 0, 0.1) 50%,
-                transparent 55%
-            );
-            animation: shine 3s infinite;
-        }
-        
-        .prount-number {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 10px;
-            text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-        }
-        
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .modal-content {
-            background: rgba(0, 0, 0, 0.9);
-            border: 2px solid var(--accent);
-            border-radius: 10px;
-            padding: 30px;
-            max-width: 800px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
-            position: relative;
-            animation: slideUp 0.5s;
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 1.5rem;
-            color: var(--secondary);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .close-modal:hover {
-            color: var(--text);
-            transform: rotate(90deg);
-        }
-        
-        .modal-title {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 20px;
+        .login-title {
             text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: var(--accent);
             text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
         }
         
-        .prount-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
         }
         
-        .prount-item {
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            color: var(--text);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            border-color: var(--text);
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            border: none;
+            border-radius: 5px;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        
+        .login-btn:hover {
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+            transform: translateY(-2px);
+        }
+        
+        /* Prounts Section */
+        .prounts-section {
+            display: none;
+            margin-top: 50px;
+        }
+        
+        .prount-container {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            animation: fadeIn 1s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .prount-title {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+            display: flex;
+            align-items: center;
+        }
+        
+        .prount-title::before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: var(--secondary);
+            margin-right: 15px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+            animation: pulse 1.5s infinite;
+        }
+        
+        .prount-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .prount-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .prount-tab {
             background: rgba(0, 0, 0, 0.5);
             border: 1px solid var(--accent);
             border-radius: 5px;
@@ -218,17 +228,14 @@
             transition: all 0.3s;
         }
         
-        .prount-item:hover {
+        .prount-tab:hover {
             background: rgba(0, 255, 0, 0.1);
-            transform: scale(1.05);
+            transform: translateY(-3px);
         }
         
-        .prount-content {
-            margin-top: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--secondary);
-            border-radius: 5px;
+        .prount-tab.active {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: var(--text);
         }
         
         /* Footer Styles */
@@ -285,12 +292,8 @@
                 font-size: 1.2rem;
             }
             
-            .prounts-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-            
-            .prount-list {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            .prount-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -302,39 +305,50 @@
     <div class="container">
         <header>
             <h1 class="title">BLACK WORLD</h1>
-            <p class="subtitle">Premium Whatsapp Unban Services</p>
+            <p class="subtitle">Whatsapp Unban Services</p>
         </header>
         
-        <div class="prounts-grid">
-            <div class="prount-box" data-prount="1">
-                <div class="prount-number">1</div>
-            </div>
-            <div class="prount-box" data-prount="2">
-                <div class="prount-number">2</div>
-            </div>
-            <div class="prount-box" data-prount="3">
-                <div class="prount-number">3</div>
-            </div>
-            <div class="prount-box" data-prount="4">
-                <div class="prount-number">4</div>
-            </div>
-            <div class="prount-box" data-prount="5">
-                <div class="prount-number">5</div>
-            </div>
-            <div class="prount-box" data-prount="6">
-                <div class="prount-number">6</div>
-            </div>
-            <div class="prount-box" data-prount="7">
-                <div class="prount-number">7</div>
-            </div>
-            <div class="prount-box" data-prount="8">
-                <div class="prount-number">8</div>
-            </div>
-            <div class="prount-box" data-prount="9">
-                <div class="prount-number">9</div>
-            </div>
-            <div class="prount-box" data-prount="10">
-                <div class="prount-number">10</div>
+        <div class="login-container" id="loginContainer">
+            <h2 class="login-title">ACCESS PORTAL</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">USERNAME</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">ENTER</button>
+            </form>
+        </div>
+        
+        <div class="prounts-section" id="prountsSection">
+            <div class="prount-container" id="prount1">
+                <h2 class="prount-title">PROUNT 1 - ABC Service</h2>
+                <div class="prount-content">
+                    <p>Premium WhatsApp unban solution with guaranteed results. Our ABC service provides the most reliable method to recover your banned WhatsApp account within 24 hours.</p>
+                    <p>Features:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>100% success rate</li>
+                        <li>24-hour recovery guarantee</li>
+                        <li>Works on permanent bans</li>
+                        <li>Complete privacy protection</li>
+                    </ul>
+                </div>
+                
+                <div class="prount-grid">
+                    <div class="prount-tab active" data-target="prount1">PROUNT 1</div>
+                    <div class="prount-tab" data-target="prount2">PROUNT 2</div>
+                    <div class="prount-tab" data-target="prount3">PROUNT 3</div>
+                    <div class="prount-tab" data-target="prount4">PROUNT 4</div>
+                    <div class="prount-tab" data-target="prount5">PROUNT 5</div>
+                    <div class="prount-tab" data-target="prount6">PROUNT 6</div>
+                    <div class="prount-tab" data-target="prount7">PROUNT 7</div>
+                    <div class="prount-tab" data-target="prount8">PROUNT 8</div>
+                    <div class="prount-tab" data-target="prount9">PROUNT 9</div>
+                    <div class="prount-tab" data-target="prount10">PROUNT 10</div>
+                </div>
             </div>
         </div>
         
@@ -353,31 +367,6 @@
             <p class="footer-text">Contact for support: 923058190234</p>
             <p class="footer-text">Telegram: @HUZIIBALOCH</p>
         </footer>
-    </div>
-    
-    <!-- Prount Modal -->
-    <div id="prountModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 class="modal-title">PROUNT <span id="prountNum"></span></h2>
-            
-            <div class="prount-list">
-                <div class="prount-item" data-content="1">PROUNT 1</div>
-                <div class="prount-item" data-content="2">PROUNT 2</div>
-                <div class="prount-item" data-content="3">PROUNT 3</div>
-                <div class="prount-item" data-content="4">PROUNT 4</div>
-                <div class="prount-item" data-content="5">PROUNT 5</div>
-                <div class="prount-item" data-content="6">PROUNT 6</div>
-                <div class="prount-item" data-content="7">PROUNT 7</div>
-                <div class="prount-item" data-content="8">PROUNT 8</div>
-                <div class="prount-item" data-content="9">PROUNT 9</div>
-                <div class="prount-item" data-content="10">PROUNT 10</div>
-            </div>
-            
-            <div class="prount-content" id="prountContent">
-                <!-- Content will be loaded here -->
-            </div>
-        </div>
     </div>
     
     <script>
@@ -428,64 +417,66 @@
             canvas.height = window.innerHeight;
         });
         
-        // Prount Modal Functionality
-        const prountBoxes = document.querySelectorAll('.prount-box');
-        const prountModal = document.getElementById('prountModal');
-        const prountNum = document.getElementById('prountNum');
-        const prountContent = document.getElementById('prountContent');
-        const prountItems = document.querySelectorAll('.prount-item');
-        const closeModalButtons = document.querySelectorAll('.close-modal');
+        // Login Functionality
+        const loginForm = document.getElementById('loginForm');
+        const loginContainer = document.getElementById('loginContainer');
+        const prountsSection = document.getElementById('prountsSection');
         
-        // Sample content for each prount
-        const prountsData = {
-            1: "<h3>ABC Service</h3><p>Premium WhatsApp unban solution with guaranteed results.</p>",
-            2: "<h3>DEF Service</h3><p>Advanced account recovery for banned numbers.</p>",
-            3: "<h3>SJ Service</h3><p>Specialized in mass reporting cases.</p>",
-            4: "<h3>SJSN Service</h3><p>Permanent ban solutions with verification.</p>",
-            5: "<h3>EJSJD Service</h3><p>VIP unban service for business accounts.</p>",
-            6: "<h3>SJSN Service</h3><p>Fast-track unban within 24 hours.</p>",
-            7: "<h3>PROUNT 7</h3><p>Service details coming soon.</p>",
-            8: "<h3>PROUNT 8</h3><p>Service details coming soon.</p>",
-            9: "<h3>PROUNT 9</h3><p>Service details coming soon.</p>",
-            10: "<h3>PROUNT 10</h3><p>Service details coming soon.</p>"
-        };
+        const correctUsername = 'BLACKWORLD';
+        const correctPassword = 'HUZIIHACKER';
         
-        // Open modal when prount box is clicked
-        prountBoxes.forEach(box => {
-            box.addEventListener('click', function() {
-                const prountNumber = this.getAttribute('data-prount');
-                prountNum.textContent = prountNumber;
-                prountContent.innerHTML = prountsData[prountNumber];
-                prountModal.style.display = 'flex';
-            });
-        });
-        
-        // Change content when prount item is clicked
-        prountItems.forEach(item => {
-            item.addEventListener('click', function() {
-                const contentNumber = this.getAttribute('data-content');
-                prountNum.textContent = contentNumber;
-                prountContent.innerHTML = prountsData[contentNumber];
-                
-                // Highlight selected item
-                prountItems.forEach(i => i.style.background = 'rgba(0, 0, 0, 0.5)');
-                this.style.background = 'rgba(0, 255, 0, 0.2)';
-            });
-        });
-        
-        // Close modal
-        closeModalButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                prountModal.style.display = 'none';
-            });
-        });
-        
-        // Close modal when clicking outside
-        window.addEventListener('click', function(e) {
-            if (e.target.classList.contains('modal')) {
-                e.target.style.display = 'none';
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username === correctUsername && password === correctPassword) {
+                // Successful login
+                loginForm.reset();
+                loginContainer.style.display = 'none';
+                prountsSection.style.display = 'block';
+                window.scrollTo({
+                    top: prountsSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Failed login
+                alert('Incorrect credentials. Please try again.');
             }
+        });
+        
+        // Prount Tabs Functionality
+        const prountTabs = document.querySelectorAll('.prount-tab');
+        
+        prountTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.getAttribute('data-target');
+                
+                // Remove active class from all tabs
+                prountTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Update content (in a real implementation, you would load different content)
+                const prountTitle = document.querySelector('.prount-title');
+                const prountContent = document.querySelector('.prount-content');
+                
+                prountTitle.textContent = `${target.toUpperCase()} - ${target === 'prount1' ? 'ABC' : target === 'prount2' ? 'DEF' : target === 'prount3' ? 'SJ' : target === 'prount4' ? 'SJSN' : target === 'prount5' ? 'EJSJD' : target === 'prount6' ? 'SJSN' : 'Service'}`;
+                
+                prountContent.innerHTML = `
+                    <p>Premium WhatsApp unban solution with guaranteed results. Our ${target.toUpperCase()} service provides specialized solutions for your banned WhatsApp account.</p>
+                    <p>Features:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>High success rate</li>
+                        <li>Fast recovery</li>
+                        <li>Works on most ban types</li>
+                        <li>Secure process</li>
+                    </ul>
+                `;
+            });
         });
     </script>
 </body>
-    </html>
+</html>
